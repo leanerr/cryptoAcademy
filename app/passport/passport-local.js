@@ -26,10 +26,10 @@ passport.use('local.register' , new localStrategy({
         
         const newUser = new User({
             name : req.body.name,
-            email,
-            password
+            email
         });
 
+        newUser.$set({ password : newUser.hashPassword(password) });
         newUser.save(err => {
             if(err) return done(err , false , req.flash('errors' , 'ثبت نام با موفقیت انجام نشد لطفا دوباره سعی کنید'));
             done(null , newUser);
