@@ -9,7 +9,6 @@ class resetPasswordController extends controller {
     showResetPassword(req , res) {
         const title = 'بازیابی رمز عبور';
         res.render('home/auth/passwords/reset' , { 
-            errors : req.flash('errors') ,
             recaptcha : this.recaptcha.render() ,
             title,
             token : req.params.token 
@@ -17,14 +16,15 @@ class resetPasswordController extends controller {
     }
 
     async resetPasswordProccess(req  ,res , next) {
-        await this.recaptchaValidation(req , res);
+        // await this.recaptchaValidation(req , res);
         let result = await this.validationData(req)
         if(result) {
             return this.resetPassword(req, res)
         } 
-            
-        return res.redirect('/auth/password/reset/' + req.body.token);
+        
+        this.back(req ,res);
     }
+
 
     async resetPassword(req ,res) {
         let field = await PasswordReset.findOne({ $and : [ { email : req.body.email } , { token : req.body.token } ]});
@@ -38,7 +38,10 @@ class resetPasswordController extends controller {
             return this.back(req, res);
         }
 
-        let user = await User.findOneAndUpdate({ email : field.email } , { $set : { password : req.body.password }});
+        let user = await User.findOne({ email : field.email });
+        user.$set({ password : user.hashPassword(req.body.password) })
+        await user.save();
+        
         if(! user) {
             req.flas('errors' , 'اپدیت شدن انجام نشد');
             return this.back();

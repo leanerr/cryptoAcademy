@@ -9,5 +9,7 @@ module.exports = {
     layout,
     service,
     port : process.env.APPLICATION_PORT,
-    cookie_sercretkey : process.env.COOKIE_SECRETKEY
+    cookie_secretkey : process.env.COOKIE_SECRETKEY,
+    debug : true,
+    siteurl : process.env.WEBSITE_URL
 }

@@ -1,34 +1,44 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
+const Schema = mongoose.Schema;
+const bcrypt = require('bcrypt');
 const uniqueString = require('unique-string')
+const mongoosePaginate = require('mongoose-paginate');
 
-const userSchema = mongoose.Schema({
-    name : { type : String , require : true },
+const userSchema = Schema({
+    name : { type : String , required : true },
+    active : { type : Boolean ,  default : false },
     admin : { type : Boolean ,  default : 0 },
-    email : { type : String , unique : true  ,require : true},
-    password : { type : String ,  require : true },
-    rememberToken : { type : String , default : null }
-} , { timestamps : true });
+    email : { type : String , unique : true  ,required : true},
+    password : { type : String ,  required : true },
+    rememberToken : { type : String , default : null },
+    vipTime : { type : Date , default : new Date().toISOString() },
+    vipType : { type : String , default : 'month' },
+    learning : [{ type : Schema.Types.ObjectId , ref : 'Course'}],
+    roles : [{ type : Schema.Types.ObjectId , ref : 'Role'}],
+} , { timestamps : true , toJSON : { virtuals : true } });
 
-userSchema.pre('save' , function(next) {
+userSchema.plugin(mongoosePaginate);
+
+userSchema.methods.hashPassword = function(password) {
     let salt = bcrypt.genSaltSync(15);
-    let hash = bcrypt.hashSync(this.password , salt);
+    let hash = bcrypt.hashSync(password , salt);
 
-    this.password = hash;
-    next();
-});
-
-userSchema.pre('findOneAndUpdate' , function(next) {
-    let salt = bcrypt.genSaltSync(15);
-    let hash = bcrypt.hashSync(this.getUpdate().$set.password , salt);
-
-    this.getUpdate().$set.password = hash;
-    next();
-});
+    return hash;
+}
 
 userSchema.methods.comparePassword = function(password) {
     return bcrypt.compareSync(password , this.password);
 }
+
+
+userSchema.methods.hasRole = function(roles) { 
+    let result = roles.filter(role => {
+        return this.roles.indexOf(role) > -1;
+    })
+
+    return !! result.length;
+}
+
 
 userSchema.methods.setRememberToken = function(res) {
     const token = uniqueString();
@@ -38,4 +48,19 @@ userSchema.methods.setRememberToken = function(res) {
     });
 }
 
+userSchema.virtual('courses' , {
+    ref : 'Course',
+    localField : '_id',
+    foreignField : 'user'
+});
+
+userSchema.methods.isVip = function() {
+    return new Date(this.vipTime) > new Date();
+}
+
+userSchema.methods.checkLearning = function(courseId) {
+    return this.learning.indexOf(courseId) !== -1;
+}
+
 module.exports = mongoose.model('User' , userSchema);
+
