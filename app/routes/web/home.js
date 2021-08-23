@@ -5,7 +5,7 @@ const router = express.Router();
 const homeController = require('app/http/controllers/homeController');
 const courseController = require('app/http/controllers/courseController');
 const userController = require('app/http/controllers/userController');
-
+const articleController = require('app/http/controllers/articleController');
 // validators 
 const commentValidator = require('app/http/validators/commentValidator');
 
@@ -25,6 +25,11 @@ router.get('/courses' , courseController.index);
 router.get('/courses/:course' , courseController.single);
 router.post('/courses/payment' , redirectIfNotAuthenticated.handle , courseController.payment);
 router.get('/courses/payment/checker' , redirectIfNotAuthenticated.handle , courseController.checker);
+
+//ََArticle
+router.get('/articles', articleController.allArticle);
+router.get('/article/:article', homeController.articlePage);
+
 
 
 router.post('/comment' , redirectIfNotAuthenticated.handle , commentValidator.handle() ,homeController.comment);
