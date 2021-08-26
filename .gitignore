@@ -86,11 +86,7 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
-<<<<<<< HEAD
 # Vs code setting
 .vscode
-=======
-
-
-.node_modules
->>>>>>> 2d776b4a3db6f7535b6471deb752bf39692fee03
+#volumes
+volumes
