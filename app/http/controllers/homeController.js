@@ -1,12 +1,49 @@
 const controller = require('app/http/controllers/controller');
 const Course = require('app/models/course');
 const Comment = require('app/models/comment');
+const Article = require('app/models/article');
+const Category = require('app/models/category');
 
 class homeController extends controller {
     
     async index(req , res) {
-        let courses = await Course.find({}).sort({ createdAt : 1}).limit(8).exec();
-        res.render('home/index' , { courses });
+        const courses = await Course.find({}).sort({ createdAt: 1 }).limit(3).exec();
+        const articles = await Article.find({}).sort({ createdAt: 1 }).limit(3).exec();
+        res.render('home/index', { courses, articles });
+    
+    }
+
+
+
+    async articlePage(req, res, next) {
+        const article = await Article.findOneAndUpdate({ slug: req.params.article }, { $inc : { viewCount : 1 }}).populate([{
+            path : 'user',
+            select : 'name'
+        } , {
+            path : 'comments',
+            match : {
+                check : true,
+                parent : null
+            },
+            populate : [{
+                path : 'user',
+                select : 'name'
+            }, {
+                path : 'comments',
+                match : {
+                    check : true
+                },populate : {
+                    path : 'user',
+                    select : 'name'
+                }
+            }]
+        },
+
+    
+    ]).exec();
+
+        const categories = await Category.find({parent : null}).populate('childs').exec();
+        res.render('home/articlePage', { article, categories });
     }
 
     async about(req , res) {

@@ -8,12 +8,14 @@ const episodeController = require('app/http/controllers/admin/episodeController'
 const commentController = require('app/http/controllers/admin/commentController');
 const categoryController = require('app/http/controllers/admin/categoryController');
 const userController = require('app/http/controllers/admin/userController');
+const articleController = require('app/http/controllers/articleController');
 
 // validators 
 const courseValidator = require('app/http/validators/courseValidator');
 const episodeValidator = require('app/http/validators/episodeValidator');
 const categoryValidator = require('app/http/validators/categoryValidator');
 const registerValidator = require('app/http/validators/registerValidator');
+const articleValidator = require('app/http/validators/articleValidator');
 
 
 // Helpers
@@ -62,6 +64,19 @@ router.post('/episodes/create' , episodeValidator.handle() , episodeController.s
 router.get('/episodes/:id/edit' , episodeController.edit);
 router.put('/episodes/:id' , episodeValidator.handle() , episodeController.update );
 router.delete('/episodes/:id' , episodeController.destroy);
+
+
+// article
+router.get('/', adminController.index);
+router.get('/article', articleController.index);
+router.get('/article/create', articleController.create);
+router.post('/article/create', upload.single('images'), convertFileToField.handle, articleValidator.handle(), articleController.store);
+// delete article
+router.delete('/article/:id', articleController.destroy);
+//edit article
+router.get('/article/:id/edit', articleController.edit);
+router.put('/article/:id', upload.single('images'), convertFileToField.handle, articleValidator.handle(), articleController.update);
+
 
 // Category Routes
 router.get('/categories' , categoryController.index);
