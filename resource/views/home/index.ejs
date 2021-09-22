@@ -1,59 +1,218 @@
-
-    <!-- Jumbotron Header -->
-<header class="jumbotron hero-spacer">
-  <h1><%= ('title') || 'کریپتو آکادمی' %></h1>
-  <p><%= ('description') %></p>
-</header>
-
-<div class="row mb-3">
-  <div class="col-lg-12">
-      <h3>آخرین دوره ها</h3>
-  </div>
-</div>
-<div class="row">
-    <% courses.forEach(course => { %>
-      <div class="col-6 col-md-3">
-          <div class="card">
-              <img class="card-img-top" src="<%= course.thumb %>" alt="<%= course.title %>">
-              <div class="card-body">
-                <h3><a href="<%= course.path() %>"><%= course.title %></a></h3>
-                <p class="card-text"><%= course.body.substr(0,100) %></p>
-                <a href="<%= course.path() %>" class="btn btn-primary btn-sm">اطلاعات بیشتر</a>
-              </div>
-              <div class="card-footer text-muted">
-                <%= course.viewCount %> بازدید
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="./assets/css/themify-icons.css">
+  <link rel="stylesheet" href="./assets/css/slick.css">
+  <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="./css/vazir.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <title>bitpod cryptowatch</title>
+</head>
+<body>
+    <div class="banner-block">
+    </div>
+      <nav class="navbar main-nav navbar-expand-lg">
+          <div class="container">
+              <a class="navbar-brand" href="index.html">
+                  <img class="navbar-logo" src="images/logo.png" alt="..."/>
+              </a>
+              <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto ">
+                      <li class="nav-item dropdown ">
+                          <a class="nav-link" href="exchange-one.html">بازار معاملات </a>
+                          <ul class="dropdown-menu text-right ">
+                              <li class="nav-item"><a class="nav-link" href="exchange-one.html">بازار پیشفرض</a></li>
+                              <li class="nav-item"><a class="nav-link" href="exchange-two.html">بازار حرفه ای</a></li>
+                              <li class="nav-item"><a class="nav-link" href="exchange-three.html">بازار  تاریک</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="chart.html">چارت ها</a></li>
+                      <li class="nav-item"><a class="nav-link" href="features.html">ویژگی ها</a></li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link" href="#">پشتیبانی</a>
+                          <ul class="dropdown-menu">
+                              <li class="nav-item"><a class="nav-link" href="support.html">Support Default</a></li>
+                              <li class="nav-item"><a class="nav-link" href="support-details.html">Support Details</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link" href="#">اخبار</a>
+                          <ul class="dropdown-menu">
+                              <li class="nav-item"><a class="nav-link" href="latest-news.html">Latest News</a></li>
+                              <li class="nav-item"><a class="nav-link" href="news-details.html">News Details</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link" href="#">بیشتر</a>
+                          <ul class="dropdown-menu text-right">
+                              <li class="nav-item"><a class="nav-link" href="faq.html">سوالات متداول</a></li>
+                              <li class="nav-item"><a class="nav-link" href="how-work.html"> نحوه عملکرد</a></li>
+                              <li class="nav-item"><a class="nav-link" href="contact.html">ارتباط با ما</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item dropdown ">
+                          <a class="nav-link" href="exchange-one.html">تاریخچه </a>
+                          <ul class="dropdown-menu text-right ">
+                              <li class="nav-item"><a class="nav-link" href="exchange-one.html">واریز ها</a></li>
+                              <li class="nav-item"><a class="nav-link" href="exchange-two.html">سفارشات</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item button">
+                          <a class="btn nav-link" href="login.html">ورود</a>
+                      </li>
+                      <li class="nav-item button active">
+                          <a class="btn nav-link" href="signup.html">ثبت نام</a>
+                      </li>
+                  </ul>
               </div>
           </div>
-      </div>
-    <% }) %>
-</div>
+          <!-- Modal -->
+      </nav><!-- main-nav-block -->
 
-<div class="box_section-item mt-2">
-  <div class="container">
-      <h5>مقاله ها</h5>
-      <div class="row">
-          <% articles.forEach(article => { %>
-          <div class="col-md-4">
-              <div class="card mb-4">
-                  <% Object.entries(article.images).forEach(([size, image]) => { %>
-                  <% if(size == "360") { %>
-                  <a href="<%= article.path() %>"><img class="card-img-top" src="<%= image %>"
-                          alt="<%= article.title %>" style="width: 100%; height: 200px; object-fit : cover"></a>
-                  <% } %>
-                  <% }) %>
-                  <div class="card-body">
-                      <h5 class="card-text"><%- article.title %></h5>
-                      <div class="d-flex justify-content-between align-items-center">
-                          <div class="btn-group">
-                              <a href="<%= article.path() %>" class="btn btn-sm btn-outline-secondary">مشاهده</a>
-                          </div>
-                          <small class="text-muted"><%- article.viewCount %></small>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <% }) %>
 
-      </div>
-  </div>
-</div>
+
+
+
+
+    <div class="colto-section">
+        <div class="container">
+            <div class="colto-content-wrap">
+                <div class="colto-content text-right">
+                    <h3>شروع کنید</h3>
+                    <p>ما آماده کرده ایم یک محیط حرفه ای و امن برای معامله ی ارز های دیجیتال تا سرمایه گذاران را راضی کنیم  </p>
+                </div>
+                <div class="colto-btn-group">
+                    <button class="btn callto-btn">ورود</button>
+                    <span>یا</span>
+                    <button class="btn callto-btn">ایجاد حساب</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- colto-section -->
+    <footer class="footer">
+        <div class="footer-upper-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="footer-logo">
+                            <a href="#">
+                                <img src="./images/logo.png" alt="img" class="img-responsive"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                        <div class="footer-info-list">
+                            <h4>درباره ما</h4>
+                            <ul>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Our Company</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Token Listing</a></li>
+                                <li><a href="#">Join Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                        <div class="footer-info-list">
+                            <h4>یادگیری</h4>
+                            <ul>
+                                <li><a href="#">Legal</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">AML&CFT</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                        <div class="footer-info-list">
+                            <h4>کمک</h4>
+                            <ul>
+                                <li><a href="#">Support</a></li>
+                                <li><a href="#">API Support</a></li>
+                                <li><a href="#">Coin/Token Listing</a></li>
+                                <li><a href="#">Partnership</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="footer-info-list">
+                            <h4>تماس با  ما</h4>
+                            <ul class="contact-info">
+                                <li>Email:  <span>info.excoin@gmail.com</span></li>
+                                <li>Phone:   <span>+99 5589 54789</span></li>
+                            </ul>
+                            <ul class="social-style-two">
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-google-plus-g"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-icon-wrap">
+                <a href="#">
+                    <img src="./images/others/31.png" alt="img" class="img-responsive">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-wrap">
+                    <div class="trade-volume-block">
+                        <ul>
+                            <li>
+                                <span>39151</span> Active Traders
+                            </li>
+                            <li>
+                                <span>4191 BTC</span> 24h Volume
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="copyright-text">
+                        © 2019 <a href="#">Excoin</a>. All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/jquery.peity.min.js"></script>
+    <script src="./assets/js/jquery.slimscroll.min.js"></script>
+    <script src="./js/custom.js"></script>
+</body>
+</html>

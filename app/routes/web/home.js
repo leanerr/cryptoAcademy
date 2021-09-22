@@ -20,6 +20,7 @@ router.get('/logout' , (req ,res) => {
 
 // Home Routes
 router.get('/' , homeController.index);
+router.get('/chart', homeController.chart)
 router.get('/about-me' , homeController.index);
 router.get('/courses' , courseController.index);
 router.get('/courses/:course' , courseController.single);

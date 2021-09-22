@@ -50,6 +50,10 @@ class homeController extends controller {
         res.render('home/about');
     }
 
+    async chart(req , res) {
+        res.render('home/chart');
+    }
+
     async comment(req, res , next) {
         try {
             let status = await this.validationData(req);
