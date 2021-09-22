@@ -53,13 +53,13 @@ class homeController extends controller {
         res.render('home/faq');
     }
     async chart(req , res) {
-        res.render('home/chart');
+        res.render('home/chart', {});
     }
     async support(req , res) {
         res.render('home/contact');
     }
     async exchange(req , res) {
-        res.render('home/exchange');
+        res.render('home/exchange-one');
     }
 
     async comment(req, res , next) {

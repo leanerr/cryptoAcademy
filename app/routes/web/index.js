@@ -11,7 +11,7 @@ const adminRouter = require('app/routes/web/admin');
 router.use('/admin' , redirectIfNotAdmin.handle , adminRouter);
 
 // Home Router
-const homeRouter = require('app/routes/web/home');
+const homeRouter = require('./home');
 router.use('/' , homeRouter);
 
 // Auth Router
