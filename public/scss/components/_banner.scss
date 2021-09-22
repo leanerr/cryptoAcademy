@@ -1,0 +1,70 @@
+
+/*
+|----------------------------------------------------------------------------
+| 6. Banner Style
+|----------------------------------------------------------------------------
+*/
+
+.banner-block{
+    padding: 310px 0 43px 0;
+    position: relative;
+    background: url("../images/bg/1.jpg") no-repeat center center;
+    background-size: cover;
+}
+.banner-content{
+    text-align: center;
+    margin-bottom: 100px;
+    h2{
+        font-weight: 700;
+        color: $white_clr;
+        margin-bottom: 30px;
+    }
+    p{
+        color: $white_clr;
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 57px;
+    }
+    .subs-form{
+        .input-box{
+            max-width: 570px;
+            position: relative;
+            margin: 0 auto;
+        }
+        input{
+            border: none;
+            height: 55px;
+            padding: 0 175px 0 25px;
+            background: $white_clr;
+            &:focus{
+                outline: 0;
+                box-shadow: none;
+            }
+        }
+        button{
+            position: absolute;
+            right: 0;
+            top: 0;
+            min-width: 170px;
+            height: 55px;
+            background: $lime_blue_clr;
+            color: $white_clr;
+            border: none;
+            outline: 0;
+            box-shadow: none;
+            font-weight: 700;
+            cursor: pointer;
+            &:active,
+            &:focus{
+                border: none;
+                outline: 0;
+                box-shadow: none;
+            }
+            border-radius: 0 3px 3px 0 ;
+            -webkit-border-radius: 0 3px 3px 0 ;
+            -moz-border-radius: 0 3px 3px 0 ;
+            -ms-border-radius: 0 3px 3px 0 ;
+            -o-border-radius: 0 3px 3px 0 ;
+}
+    }
+}

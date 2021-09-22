@@ -1,0 +1,156 @@
+/*
+|----------------------------------------------------------------------------
+| 11. Tranding Info Style
+|----------------------------------------------------------------------------
+*/
+.new-ticker-block-wrap{
+	border: 1px solid $border_clr;
+	border-radius: 5px;
+}
+.teanding-info-block{
+	padding: 120px 0;
+	table{
+		border: 1px solid $border_clr;
+		thead{
+			tr{
+				th{
+					&:first-child{
+						padding: 15px;
+						text-align: center;
+						border-right: 1px solid $border_clr;
+					}
+				}
+			}
+		}
+		tbody{
+			tr{
+				td{
+					padding: 15px;
+					&:first-child{
+						text-align: center;
+						border-right: 1px solid $border_clr;
+					}
+					img{
+						display: inline-block;
+						margin-right: 8px;
+					}
+					span{
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+	}
+	.search-form{
+		input[type='text']{
+			height: 50px;
+			min-width: 270px;
+			border: 1px solid $border_clr;
+			@include radius-border(5px);
+		}
+		button{
+			height: 50px;
+		}
+	}
+}
+
+.trending-info-currency-option{
+	.dropdown-toggle{
+		background: $soft_gray_clr_three;
+		color: $soft_gray_clr;
+		min-width: 150px;
+		min-height: 50px;
+		vertical-align: middle;
+		position: relative;
+		border: 1px solid $border_clr;
+		&:focus,
+		&:active{
+			box-shadow: none;
+		}
+		&:after{
+			position: absolute;
+    		right: 25px;
+    		top: 21px;
+		}
+
+	}
+	.dropdown-menu{
+		min-width: 150px;
+	}
+	.dropdown-item.active,
+	.dropdown-item:active{
+		background: $soft_gray_clr_three;
+		color: $soft_gray_clr;
+	}
+	
+	i.fas{
+		background:$white_clr;
+		border: 1px solid $border_clr;
+		height: 26px;
+		width: 26px;
+		vertical-align: middle;
+		font-size: 13px;
+		line-height: 25px;
+		text-align: center;
+		color: $soft_navi_clr;
+		@include radius-border(50%);
+		position: absolute;
+		left: 15px;
+	}
+}
+
+.trending-info-currency-option .btn-primary:not(:disabled):not(.disabled).active,
+.trending-info-currency-option .btn-primary:not(:disabled):not(.disabled):active,
+.trending-info-currency-option.show>.btn-primary.dropdown-toggle{
+	background: $soft_gray_clr_three;
+	color: $soft_gray_clr;
+	border: 1px solid $border_clr;
+	box-shadow: none;
+}
+
+.trending-info-tab{
+	margin-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.nav-item{
+		flex-grow: initial;
+		min-width: 100px;
+	}
+}
+
+//account-content-style
+.account-server-info-block{
+	border: 1px solid $border_clr;
+	margin-top: 30px;
+}
+// .account-server-info-block+.account-server-info-block{
+// 	margin-top: 30px;
+// }
+.account-table{
+	margin-bottom: 0;
+	thead{
+		tr{
+			th{
+				border: none;
+				text-align: right;
+				color: $soft_gray_clr_two;
+				&:first-child{
+					text-align: left;
+				}
+			}
+		}
+	}
+	tbody{
+		tr{
+			background: $white_clr;
+			text-align: right;
+			td{
+				&:first-child{
+					text-align: left;
+				}
+			}
+			
+		}
+	}
+}

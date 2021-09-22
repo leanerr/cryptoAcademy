@@ -1,0 +1,168 @@
+/*
+|----------------------------------------------------------------------------
+| 3. Coin List Style
+|----------------------------------------------------------------------------
+*/
+.new-ticker-block-section{
+	padding: 120px 0 0 0;
+	.coin-list{
+		
+		th,
+		tr{
+			font-size: 14px;
+		}
+	}
+}
+.new-ticker-block{
+	.search-form .input-box input[type='text']{
+		border-color: transparent;
+	}
+}
+.ex-color-buy,
+.color-buy{
+	color: $success_clr;
+}
+.ex-color-sell,
+.color-sell{
+	color: $soft_red_clr;
+}
+
+.color-buy,
+.color-sell{
+	position: relative;
+	cursor: pointer;
+}
+.ticker-nav{
+	display: flex;
+	.nav-item-last{
+		flex-grow: 6;
+	}
+	.nav-item{
+		flex-grow: 1;
+		min-width: 100px;
+		text-align: center;
+		a{
+			font-weight: 600;
+			color: $soft_navi_clr;
+			margin: 0;
+			padding: 16px 30px;
+			background: $white_clr;
+			@include radius-border(0);
+			border-right: 1px solid #f0f0f0;
+			border-left: 1px solid transparent;
+			border-bottom: 1px solid #b5d6ff;
+			&:focus,
+			&:active,
+			&:hover{
+				border-right: 1px solid #b5d6ff;
+				border-bottom: 1px solid transparent;
+				border-left: 1px solid #b5d6ff;
+				border-top: 1px solid #b5d6ff;
+			}
+			h5{
+				display: inline-block;
+				font-size: 15px;
+				font-weight: 600;
+				color: $soft_navi_clr;
+				margin: 0 0 0 15px;
+			}
+		}
+		
+		a.active{
+			background: transparent;
+			border-right: 1px solid #b5d6ff;
+			border-bottom: 1px solid $lime_gray;;
+			border-left: 1px solid #b5d6ff;
+			border-top: 1px solid #b5d6ff;
+			color: $lime_blue_clr;
+			h5{
+				color: $lime_blue_clr;
+			}
+		}
+	}
+	.nav-item-last{
+		flex-grow: 6;
+	}
+}
+.search-form{
+	.input-box{
+		position: relative;
+		button{
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: transparent;
+			width: 50px;
+			height: 55px;
+			border: none;
+			cursor: pointer;
+			&:focus,
+			&:active{
+				outline: 0;
+				box-shadow: none;
+			}
+		}
+		input[type='text']{
+			height: 56px;
+			border: none;
+			border-bottom: 1px solid #b5d6ff;
+			@include radius-border(0);
+			&:focus,
+			&:active{
+				outline: 0;
+				box-shadow: none;
+			}
+		}
+	}
+}
+
+.coin-list{
+	margin-bottom: 0;
+	border-bottom: none;
+	thead{
+		th{
+			border: none;
+			font-size: 13px;
+			font-family: $quicksand_font;
+			color: $soft_gray_clr_two;
+			font-weight: 300;
+		}
+	}
+	tbody{
+		tr{
+			border-top: 1px solid $border_clr_two;
+			border-bottom: 1px solid $border_clr_two;
+			background: $white_clr;
+			&:hover{
+				background-color: rgba(0,0,0,.03);
+			}
+			td{
+				border-top: none;
+				color: $soft_gray_clr;
+				padding: 22px 15px;
+				font-weight: 600;
+				b{
+					color: #a2a2a2;
+				}
+			}
+		}
+	}
+}
+.favorite-coin{
+	padding: 0 20px;
+	position: relative;
+	cursor: pointer;
+	&:before{
+		content: "\f005";
+		font-weight: 300;
+		font-family: Font Awesome\ 5 Free;
+	}
+
+}
+.favorite-coin.active{
+	&:before{
+		content: "\f005";
+		font-weight: 900;
+		color: $lime_yellow;
+	}
+}

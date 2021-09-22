@@ -1,0 +1,382 @@
+/*-------------------------
+	Responsive Styles
+-------------------------*/
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .navbar-expand-lg .navbar-nav .nav-link,
+  .navbar-nav > li > a {
+    padding: 6px 15px; }
+  .graph-item {
+    padding: 25px 10px; }
+  .post-style-two.post-full-width .post-contnet-wrap {
+    padding: 61px 40px; }
+  .post-style-two.post-full-width .post-entry {
+    margin-bottom: 48px; }
+  .order-count-dropdown button.dropdown-toggle:before {
+    content: none; } }
+
+@media screen and (max-width: 1199px) {
+  .dashboard-body .das-oreder-table-block,
+  .dashboard-body .history-table-wrap,
+  .dashboard-body .tab-pane {
+    overflow-x: auto; }
+  .dashboard-body .table.das-oreder-table,
+  .dashboard-body .table.das-buy-table,
+  .dashboard-body .tab-pane .table.coin-list {
+    min-width: 250px; }
+  .dashboard-body .dahboard-order-block .das-oreder-nav .nav-item-first a {
+    padding: 7px 3px; }
+  .dashboard-body .ticker-nav .nav-item a.active h5 {
+    margin-left: 5px; }
+  .dashboard-body .market-new-ticker-block .ticker-nav .nav-item a {
+    padding: 8px 3px; }
+  .teanding-info-block .table.coin-list {
+    min-width: 1050px; }
+  .latest-tranjections-block-inner {
+    overflow-x: auto; }
+    .latest-tranjections-block-inner .table.coin-list {
+      min-width: 680px; }
+  .ticker-nav .nav-item a {
+    padding: 16px 0; }
+  .ticker-nav .nav-item-last {
+    display: block;
+    width: 100%; }
+    .ticker-nav .nav-item-last .search-form .input-box input[type='text'] {
+      border-top: 1px solid #b5d6ff; }
+  .footer-info-list .social-style-two li {
+    margin-right: 15px; }
+  .contact-info-block {
+    padding: 0 30px; }
+  .user-login-signup-section {
+    padding: 180px 0; }
+  .trandinginfo-table-block {
+    overflow-x: auto; }
+  .tv_ammount-form-block .form-group label {
+    font-size: 12px; }
+  .navigation-two .navbar {
+    padding: 0; }
+  .dashboard-fullwidth {
+    padding: 0; }
+    .dashboard-fullwidth .tv_ammount-form-block .form-group label {
+      font-size: 15px; } }
+
+@media screen and (max-width: 991px) {
+  .post-style-one {
+    margin-bottom: 30px; }
+  .colto-content-wrap {
+    display: block;
+    text-align: center; }
+  .colto-content {
+    margin-bottom: 30px; }
+  .colto-btn-group {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .footer-info-list {
+    margin-bottom: 50px; }
+  .footer-upper-section {
+    padding-bottom: 70px; }
+  .news-headlines-slider .slick-slide {
+    margin: 0 15px; }
+  .banner-content p br {
+    display: none; }
+  .accordion.style-2 .accordion-header button {
+    line-height: 23px; }
+  .features-section {
+    padding-bottom: 0; }
+  .features-block {
+    margin-bottom: 30px; }
+  .counter-section {
+    padding: 210px 0 80px 0; }
+  .testimonials-section {
+    padding: 80px; }
+  .testimonial-slider {
+    padding: 30px; }
+  .dahboard-order-block {
+    overflow-x: auto; }
+    .dahboard-order-block .table.das-oreder-table {
+      min-width: 400px; }
+  .order-history-block-inner,
+  .das-market-tab-pane {
+    overflow-x: auto; }
+    .order-history-block-inner .table.coin-list,
+    .das-market-tab-pane .table.coin-list {
+      min-width: 400px; }
+  .currency-rate .currency-convert {
+    padding-right: 15px; }
+  .currency-rate .update-rate {
+    padding-left: 15px; }
+  .user-connected-form-block h3 br {
+    display: none; }
+  .post-style-two.post-full-width {
+    display: block; }
+    .post-style-two.post-full-width .post-contnet-wrap {
+      padding: 80px 100px 80px 50px; }
+  .user-login-signup-section {
+    padding: 150px 0; }
+  .user-login-signup-form-wrap .modal-content {
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%; }
+  .blog-details-wrapper {
+    display: block; }
+    .blog-details-wrapper .info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .blog-details-wrapper .info .post-meta-block,
+      .blog-details-wrapper .info .post-author-block {
+        margin-bottom: 20px; }
+      .blog-details-wrapper .info .post-meta-block span {
+        margin-bottom: 0px; }
+  .details-post-meta-block-wrap .post-author-block {
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 40%; }
+  .details-post-meta-block-wrap .post-tag-block {
+    -ms-flex-preferred-size: 80%;
+    flex-basis: 80%; }
+  .details-post-meta-block-wrap .post-share-block {
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%; }
+    .details-post-meta-block-wrap .post-share-block .social-share-list li {
+      margin: 8px; }
+  .user-connected-from .row.form-group {
+    display: block; }
+    .user-connected-from .row.form-group > .col {
+      margin-bottom: 30px; }
+  .support-list-block {
+    margin-bottom: 50px; }
+  .dashboard-body .dahboard-order-block .das-oreder-nav .nav-item-first a {
+    padding: 7px 15px;
+    line-height: 22px;
+    font-size: 15px; }
+  .dashboard-body .das-oreder-nav .nav-item a img {
+    margin: 4px auto; }
+  .currency-rate {
+    padding: 15px 10px; }
+  .tv_ammount-form-block .form-group label {
+    font-size: 15px; }
+  .dahboard-order-block {
+    margin-bottom: 30px; }
+  .catagori-vintage {
+    display: none; }
+  .new-ticker-block-section .market-ticker-block {
+    overflow-x: auto; }
+    .new-ticker-block-section .market-ticker-block .table.coin-list {
+      min-width: 900px; }
+  .navigation-two .navbar-brand {
+    padding-left: 15px; } }
+
+@media screen and (max-width: 767px) {
+  .news-tags {
+    display: none; }
+  .ticker-nav .nav-item a {
+    border-bottom: 1px solid #e8e9eb;
+    margin-bottom: 1px; }
+  .ticker-nav .nav-item a.active {
+    border-bottom: 1px solid #b5d6ff; }
+  .ticker-nav .nav-item-last .search-form .input-box input[type='text'] {
+    border-color: transparent; }
+  .activity-block {
+    text-align: center; }
+    .activity-block img {
+      margin: 0 auto 25px auto; }
+  .catagori-content-block {
+    display: block;
+    text-align: center; }
+    .catagori-content-block .catagori-list {
+      margin-bottom: 60px; }
+      .catagori-content-block .catagori-list .nav-item {
+        text-align: center; }
+  .catagoritab-content {
+    padding: 0; }
+    .catagoritab-content img {
+      margin: 0 auto 26px auto; }
+  .catagori-vintage {
+    display: none; }
+  .post-style-one {
+    text-align: center; }
+  .footer-upper-section .footer-icon-wrap {
+    bottom: 115px; }
+  .footer-bottom-wrap {
+    display: block; }
+    .footer-bottom-wrap .trade-volume-block {
+      margin-bottom: 30px; }
+  .copyright-text {
+    margin: 0 auto;
+    text-align: center; }
+  .footer-logo {
+    margin-bottom: 50px; }
+  .map-block {
+    margin-bottom: 30px; }
+  .subheader p br {
+    display: none; }
+  .faq-section .list-group {
+    margin-bottom: 50px; }
+  .working-process {
+    margin-bottom: 80px; }
+  .counter-block {
+    margin-bottom: 40px; }
+  .post-style-two.post-full-width .post-contnet-wrap {
+    padding: 50px; }
+  .user-login-signup-form-wrap .modal-content {
+    -ms-flex-preferred-size: 85%;
+    flex-basis: 85%; }
+  .details-post-meta-block-wrap .post-author-block {
+    -ms-flex-preferred-size: 60%;
+    flex-basis: 60%; }
+  .details-post-meta-block-wrap .post-tag-block {
+    -ms-flex-preferred-size: 65%;
+    flex-basis: 65%; }
+    .details-post-meta-block-wrap .post-tag-block .tags a {
+      margin-bottom: 8px; }
+  .details-post-meta-block-wrap .post-share-block {
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%; }
+    .details-post-meta-block-wrap .post-share-block .social-share-list li {
+      margin: 8px; }
+  .post-comment-block {
+    display: block; }
+    .post-comment-block .comment-respond:before {
+      content: none; }
+  .details-post-meta-block-wrap {
+    display: block; }
+    .details-post-meta-block-wrap .post-tag-block,
+    .details-post-meta-block-wrap .post-author-block {
+      margin-bottom: 30px; }
+  .reply .modal-content {
+    width: 85%;
+    margin: 0 auto; }
+  .support-list {
+    margin-bottom: 50px; }
+    .support-list .nav-tabs {
+      display: block; }
+      .support-list .nav-tabs li {
+        display: block; }
+      .support-list .nav-tabs li + li {
+        margin-top: 15px; }
+  .ticker-nav .nav-item {
+    width: 50%; }
+  .ticker-nav .nav-item.nav-item-last {
+    width: 100%; }
+  #chartdiv,
+  .order-form-area-block,
+  .tradingview-widget-container,
+  .dahboard-order-block {
+    margin-bottom: 30px; }
+  .order-form-area-block {
+    display: block;
+    width: 100%; }
+  .currency-rate .currency-convert {
+    border: 0;
+    margin-bottom: 10px; }
+    .currency-rate .currency-convert .dropdown .btn {
+      padding-left: 0; }
+  .currency-rate .update-rate {
+    padding-left: 0; } }
+
+@media screen and (max-width: 575px) {
+  .currency-rate .update-rate .currency-info {
+    -ms-flex-preferred-size: 182px;
+    flex-basis: 182px; }
+  .accordion.style-2 .accordion-header button {
+    padding: 20px 30px 20px 0; }
+  .qs-answer-section .btn-default {
+    margin: 8px; }
+  .features-block {
+    margin-bottom: 35px; }
+  .testimonials-section {
+    padding: 80px 0px; }
+  .testimonial-slider button.slick-next {
+    display: none !important; }
+  .subheader-search {
+    width: 90%; }
+  .order-form-area-block .tab-pane {
+    overflow-x: auto; }
+  .order-form-area-block .table.tv_orde_table {
+    min-width: 550px; }
+  .currency-info + .currency-info {
+    margin-top: 20px; } }
+
+@media screen and (max-width: 499px) {
+  .graph .col-6 {
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%; }
+  .banner-content h2 {
+    font-size: 36px; }
+  .banner-content .subs-form input {
+    padding: 0 25px;
+    margin-bottom: 15px; }
+  .banner-content .subs-form button {
+    position: relative;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px; }
+  .section-title-one h3 {
+    font-size: 30px; }
+  .download-wrap {
+    margin: 0 15px 30px 15px; }
+  .callto-btn {
+    padding: 15px; }
+  .subheader-wrapper h3 {
+    font-size: 25px;
+    line-height: 35px; }
+  .qs-answer-section p {
+    font-size: 12px; }
+  .testimonial-slider {
+    padding: 15px; }
+  .user-connected-form-block {
+    padding: 30px 20px; }
+  .post-style-two.post-full-width .post-contnet-wrap {
+    padding: 15px; }
+  .post-style-two .post-contnet-wrap {
+    padding: 15px; }
+  .user-login-signup-form-wrap .modal-content {
+    -ms-flex-preferred-size: 95%;
+    flex-basis: 95%; }
+  .pass-remember-block div a,
+  .custom-control-label {
+    line-height: 15px; }
+  .single-post-block blockquote br {
+    display: none; }
+  .support-details-footer {
+    display: block; }
+    .support-details-footer .ishelpful-block {
+      margin-bottom: 30px; }
+  .trending-info-tab {
+    display: block; }
+    .trending-info-tab > .nav-item {
+      margin-bottom: 30px; } }
+
+@media screen and (max-width: 320px) {
+  .footer-upper-section .footer-icon-wrap {
+    left: 0;
+    right: 0;
+    bottom: 65px; }
+    .footer-upper-section .footer-icon-wrap a {
+      display: block; }
+      .footer-upper-section .footer-icon-wrap a img {
+        margin: 0 auto; }
+  .trade-volume-block ul li {
+    display: block;
+    margin-right: 0px;
+    font-size: 14px; }
+  .user-connected-form-block h3 {
+    font-size: 18px;
+    line-height: 26px; }
+  .post-style-two .author-info h5 {
+    line-height: 18px; }
+  .blog-details-wrapper .info {
+    display: block; }
+  .support-details-content .sp-title {
+    font-size: 21px;
+    line-height: 30px; } }

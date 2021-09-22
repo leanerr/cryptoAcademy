@@ -1,0 +1,89 @@
+
+/*
+|----------------------------------------------------------------------------
+| 5. Wallets Style
+|----------------------------------------------------------------------------
+*/
+.wallets-section{
+    padding-bottom: 120px;
+}
+.wallets-block{
+    text-align: center;
+    >img{
+        display: inline;
+        margin-bottom: 35px;
+    }
+    >img+h5{
+        margin-bottom: 8px;
+    }
+    h5{
+        line-height: 20px;
+        font-weight: 600;
+    }
+    .base-color{
+        margin-bottom: 45px;
+    }
+}
+.download-option-block{
+    margin-bottom: 50px;
+}
+.download-wrap-inner{
+    display: block;
+}
+//app-download section
+.download-wrap-inner{
+    margin-bottom: 20px;
+    +h4{
+        font-weight: 700;
+        font-size: 15px;
+    }
+}
+.download-wrap{
+    position: relative;
+    display: inline-block;
+    margin-right: 50px;
+    &:last-of-type{
+        margin-right: 0px;
+    }
+    .input-hidden{
+        position: absolute;
+        left: -9999px;
+    }
+    input[type=radio] + label>i.fab{
+        height: 70px;
+        width: 70px;
+        color: $dark_blue_clr;
+        border: 1px solid $border_clr;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 65px;
+        font-size: 28px;
+        cursor: pointer;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+}
+    input[type=radio]:checked + label>i.fab {
+       background: $lime_blue_clr;
+       color: $white_clr;
+    }
+}
+.download-btn{
+    width: 200px;
+    height: 60px;
+    font-weight: 500;
+    background: $lime_blue_clr;
+    color: $white_clr;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    &:active,
+    &:focus,
+    &focus:active{
+        outline: none;
+        box-shadow: none;
+    }
+}

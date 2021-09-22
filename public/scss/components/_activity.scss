@@ -1,0 +1,26 @@
+/*
+|----------------------------------------------------------------------------
+| 4. Activity Style
+|----------------------------------------------------------------------------
+*/
+
+.activity-section{
+    padding: 120px 0 90px 0;
+}
+.activity-block{
+    margin-bottom: 30px;
+    padding: 40px 30px;
+    background: $white_clr;
+    box-shadow: 0px 20px 45px 0px rgba(0, 0, 0, 0.05);
+    img{
+        margin-bottom: 25px;
+    }
+    h4{
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: $dark_blue_clr;
+    }
+    p{
+        margin-bottom: 0;
+    }
+}

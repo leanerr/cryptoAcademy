@@ -1,0 +1,13 @@
+@mixin transition($time) {
+	-webkit-transition: $time ease-in;
+	-o-transition: $time ease-in;
+	transition: $time ease-in;
+}
+@mixin background-opacity($color, $opacity) {
+    background: rgba($color, $opacity);
+}
+@mixin radius-border($rdius) {
+    -webkit-border-radius: $rdius;
+	-o-border-radius: $rdius;
+	border-radius: $rdius;
+}

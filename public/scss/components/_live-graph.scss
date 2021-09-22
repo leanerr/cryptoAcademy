@@ -1,0 +1,41 @@
+/*
+|----------------------------------------------------------------------------
+| 7. Live-graph Style
+|----------------------------------------------------------------------------
+*/
+.volume,
+.transmoney,
+.color-white{
+    color: $white_clr;
+}
+.graph-padding {
+	margin: 20px 0 40px;
+}
+.graph-item-block{
+    display: block;
+}
+.graph-item{
+    padding: 25px 15px;
+    margin-bottom: 30px;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px 5px 5px 5px;
+    .graph-content h5{
+        font-weight: 700;
+        color: $white_clr;
+        margin-bottom: 23px;
+    }
+    .price-change{
+        font-weight: 700;
+    }
+    .volume,
+    .transmoney{
+        font-size: 13px;
+    }
+}

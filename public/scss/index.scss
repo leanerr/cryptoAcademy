@@ -1,0 +1,47 @@
+
+
+
+/* This css file is to override bootstarp4 css
+********************************************************* /
+* Theme Name: Ex-Coin
+* Theme URI:  http://themeforest.ne/user/uigigs
+* Author: uigigs
+* Author URI: http://uigigs.com
+* Description:  Ex-coin html5 template
+* Version: 1.0.0
+* License: GNU General Public License v2 or later
+* License URI: http://www.gnu.org/licenses/gpl-2.0.html
+* Tags: template,site template, html5, template
+*********************************************************** /
+
+/*
+|----------------------------------------------------------------------------
+| CSS INDEX
+|----------------------------------------------------------------------------
+
+1. General Style
+2. Navbar Style
+3. Coin List Style
+4. Activity Style
+5. Wallets Style
+6. Banner Style
+7. Live-graph Style
+8. Catagori Style
+9. Common Component Style
+10. Currency Dashboard Style
+11. Tranding Info Style
+12. Working-process Style
+13. Post Style
+14 Blog Details Style
+15. Support Details Style
+16. FAQ Style
+17. Footer Style
+
+*/
+
+
+@import "./core/variable";
+@import "./core/mixins";
+@import "./core/prefix/prefixes";
+@import "./core/general";
+@import "./components/components";

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+{% extends 'UserPanel/master.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="./assets/css/themify-icons.css">
+  <link rel="stylesheet" href="./assets/css/slick.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <title>بازار معاملاتی| بیت پاد</title>
+</head>
+<body>
+    <div class="user-login-signup-section modal-container">
+        <nav class="navbar main-nav navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img class="navbar-logo" src="images/logo.png" alt="..."/>
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="exchange-one.html">Exchange </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="nav-link" href="exchange-one.html">Exchange Default</a></li>
+                                <li class="nav-item"><a class="nav-link" href="exchange-two.html">Exchange Full</a></li>
+                                <li class="nav-item"><a class="nav-link" href="exchange-three.html">Exchange Dark</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="chart.html">Chart</a></li>
+                        <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#">Support</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="nav-link" href="support.html">Support Default</a></li>
+                                <li class="nav-item"><a class="nav-link" href="support-details.html">Support Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#">News</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="nav-link" href="latest-news.html">Latest News</a></li>
+                                <li class="nav-item"><a class="nav-link" href="news-details.html">News Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#">More</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="nav-link" href="faq.html">Faq</a></li>
+                                <li class="nav-item"><a class="nav-link" href="how-work.html">How Work</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown language-option">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-globe"></i> EN
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                            <i class="fab fa-buysellads"></i> US
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-lira-sign"></i> UK
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item button">
+                            <a class="btn nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item button active">
+                            <a class="btn nav-link" href="signup.html">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Modal -->
+        </nav><!-- main-nav-block -->
+        <div class="container">
+            <div class="user-login-signup-form-wrap">
+                <div class="modal-content">
+                                      <!-- Also consider that if a one time message send from a request the following code should be used  -->
+                    <!-- {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                                <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message|safe }} </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <!-- Consider we need to show messages for each form when it git into error -->
+                    <!-- {% if form.errors %}
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                <div class="alert alert-danger">
+                                    <strong>{{ error|escape }}</strong>
+                                </div>
+                            {% endfor %}
+                        {% endfor %}
+                        {% for error in form.non_field_errors %}
+                            <div class="alert alert-danger">
+                                <strong>{{ error|escape }}</strong>
+                            </div>
+                        {% endfor %}
+                    {% endif %} -->
+                    <h3>افزودن حساب بانکی</h3>
+                    <div class="modal-body">
+                        <div class="modal-info-block">
+                            <p>از صحیح بودن آدرس وبسایت اطمینان حاصل نمایید</p>
+                            <div class="block-inner">
+                                <p>
+                                    <span>
+                                        <i class="fas fa-lock"></i>
+                                        https://
+                                    </span>
+                                    www.bitpod.live
+                                </p>
+                            </div>
+                        </div>
+                        <div class="user-connected-form-block">
+                            <form class="user-connected-from user-login-form "
+                                  action="{% url 'user-bank-account-save' %}"
+                                  method="post" enctype="multipart/form-data">
+                                  <div class="input-group my-2">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupFileAddon01">آپلود</span>
+                                      </div>
+                                      <div class="custom-file">
+                                        <input type="file" class="custom-file-input"name="card_image" id="images"
+                                          aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label text-center" for="inputGroupFile01">آپلود تصویر کارت بانکی</label>
+                                      </div>
+                                  </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control text-right" name="bank"  id="exampleInputEmail1" placeholder="نام">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="card_num" id="exampleInputEmail1" placeholder="شماره کارت">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control"  name="account_num" id="exampleInputEmail1" placeholder="شماره حساب ">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control"   name="shaba_num" id="exampleInputEmail1" placeholder="شماره شبا">
+                                </div>
+
+
+                                <button type="submit" class="btn btn-default">ثبت اطلاعات</button>
+                            </form>
+                        </div><!-- confirm-account-block -->
+                    </div>
+                </div>
+            </div><!-- user-confirm-signup-form-wrap -->
+        </div>
+    </div><!-- user-confirm-signup-section -->
+
+    {% endblock %}
+{% block extra_scripts %}
+
+    <script type="text/javascript">
+        function changeImage() {
+
+            var file = document.getElementById('images').files[0];
+            var reader = new FileReader();
+            // it's onload event and you forgot (parameters)
+            reader.onload = function (e) {
+                var image = document.getElementById("profile-image");
+                // the result image data
+                image.src = e.target.result;
+                {#document.body.appendChild(image);#}
+            };
+            // you have to declare the file loading
+            reader.readAsDataURL(file);
+        }
+    </script>
+{% endblock %}
+
+    <script src="./assets/js/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/jquery.peity.min.js"></script>
+    <script src="./assets/js/jquery.slimscroll.min.js"></script>
+    <script src="./js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+/*
+|----------------------------------------------------------------------------
+| 13. Post Style
+|----------------------------------------------------------------------------
+*/
+.latest-post-section{
+    padding: 120px 0 60px 0;
+}
+.post-style-two.post-full-width{
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    .post-contnet-wrap{
+        padding: 100px 100px 101px 50px;
+    }
+    .post-thumb{
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 50%;
+    }
+    .post-meta{
+        margin-bottom: 8px;
+    }
+    .post-title{
+        margin-bottom: 26px;
+        a{
+            font-size: 24px;
+        }
+    }
+    .post-entry{
+        margin-bottom: 60px;
+    }
+}
+
+.post-style-two{
+    margin-bottom: 60px;
+    .post-contnet-wrap{
+        padding: 22px 30px 18px 30px;
+        background-color: $white_clr;
+        border: 1px solid $border_clr;
+        transition: all 0.3s ease-in;
+        -webkit-transition: all 0.3s ease-in;
+        -moz-transition: all 0.3s ease-in;
+        -ms-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        &:hover{
+            box-shadow: 0px 20px 45px 0px rgba(0, 0, 0, 0.05);
+        }
+}
+    .post-thumb{
+        img,a{display: block;}
+    }
+    .post-meta{
+        font-size: 14px;
+        color: $lime_blue_clr;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .post-title{
+        margin-bottom: 25px;
+        a{
+            color: $soft_navi_clr;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    .post-entry{
+        margin-bottom: 35px;
+    }
+    .post-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .author-thumb{
+        img{
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            display: block;
+            margin-right: 12px;
+        }
+    }
+    .post-comments,
+    .post-author-block,
+    .post-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .author-info{
+        h5{
+            font-size: 14px;
+            font-weight: 700;
+
+        }
+    }
+    .post-comments{
+        img{
+            margin-right: 9px;
+        }
+    }
+}
+
+

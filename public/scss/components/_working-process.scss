@@ -1,0 +1,195 @@
+/*
+|----------------------------------------------------------------------------
+| 12. Working-process Style
+|----------------------------------------------------------------------------
+*/
+.working-process-section{
+    padding: 120px 0 80px 0;
+}
+.working-process-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li+li{
+        margin-top: 55px;
+    }
+}
+.working-process-step{
+    h4{
+        font-weight: 700;
+        color: $dark_blue_clr;
+        margin-bottom: 10px;
+        span{
+            color: $lime_blue_clr;
+        }
+    }
+}
+.process-details{
+    margin-left: 15px;
+    padding: 10px 0 0 35px;
+    position: relative;
+    p{
+        margin-bottom: 0;
+    }
+    &:before{
+        content:url("../images/others/19.png");
+        position: absolute;
+        left: 0;
+        top: 9px;
+    }
+}
+
+.user-connected-form-block{
+    padding: 40px 40px 45px 40px;
+    background: $white_clr;
+    box-shadow: 0px -20px 45px 0px rgba(0, 0, 0, 0.05);
+    h3{
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 700;
+        color: $soft_navi_clr;
+        margin-bottom: 30px;
+    }
+    p{
+        margin:  0 auto;
+        text-align: center;
+        font-size: 14px;
+        a{
+            color: $lime_blue_clr;
+        }
+    }
+}
+.user-connected-from{
+    input{
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+        min-height: 50px;
+        padding: 0 20px;
+        border: 1px solid $border_clr;
+        &:focus{
+            outline: none;
+            box-shadow: none;
+            border-color: $border_clr;
+        }
+    }
+    .form-group{
+        margin-bottom: 30px;
+    }
+    .btn-default{
+        width:100%;
+        border-radius:0;
+        -webkit-border-radius:0;
+        -moz-border-radius:0;
+        -ms-border-radius:0;
+        -o-border-radius:0;
+        background: $lime_blue_clr;
+        color: $white_clr;
+        font-weight: 700;
+        font-size: 15px;
+        min-height: 50px;
+        margin-bottom: 20px;
+        &:active,
+        &:focus:active,
+        &:focus{
+            outline: none;
+            box-shadow: none;
+        }
+}
+}
+//counter section
+.counter-section.counter-style-two{
+    padding: 210px 0 286px 0;
+}
+.counter-section{
+    position: relative;
+    overflow: hidden;
+    padding: 210px 0 120px 0;
+    background: url(../images/bg/3.png) no-repeat top -10px center;
+}
+.counter-block{
+    text-align: center;
+    margin-bottom: 30px;
+    h3{
+        color: $lime_blue_clr;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    p{
+        margin-bottom: 0;
+        font-size: 18px;
+    }
+}
+.counter-vintage{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -90px;
+    margin: 0 auto;
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+//app-download-section
+
+.app-download-section{
+    padding: 120px 0 90px 0;
+    background-image: -moz-linear-gradient( 90deg, rgb(255,255,255) 0%, rgba(22,82,240,0.03) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(255,255,255) 0%, rgba(22,82,240,0.03) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(255,255,255) 0%, rgba(22,82,240,0.03) 100%);
+}
+.download-options-list{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    li{
+        display: inline-block;
+        margin: 0 30px 30px 0;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+.apps-download-btn{
+    display: flex;
+    min-width: 200px;
+    padding: 12px 25px;
+    border: 1px solid $border_clr ;
+    background: $white_clr;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    &:focus,
+    &:active,
+    &:focus:active{
+        outline: none;
+        box-shadow: none;
+    }
+    p{
+        margin: 0;
+    }
+    i.fab,
+    i.fas{
+        font-size: 30px;
+        color: $lime_blue_clr;
+    }
+    .btn-content{
+        padding-left: 15px;
+        text-align: left;
+        span{
+            font-size: 14px;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+        }
+    }
+}
+
+  
