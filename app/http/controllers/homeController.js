@@ -46,12 +46,20 @@ class homeController extends controller {
         res.render('home/articlePage', { article, categories });
     }
 
-    async about(req , res) {
-        res.render('home/about');
+    async features(req , res) {
+        res.render('home/features');
     }
-
+    async faq(req , res) {
+        res.render('home/faq');
+    }
     async chart(req , res) {
         res.render('home/chart');
+    }
+    async support(req , res) {
+        res.render('home/contact');
+    }
+    async exchange(req , res) {
+        res.render('home/exchange');
     }
 
     async comment(req, res , next) {

@@ -18,9 +18,7 @@ router.get('/logout' , (req ,res) => {
     res.redirect('/');
 });
 
-// Home Routes
-router.get('/' , homeController.index);
-router.get('/chart', homeController.chart)
+// course Routes
 router.get('/about-me' , homeController.index);
 router.get('/courses' , courseController.index);
 router.get('/courses/:course' , courseController.single);
@@ -31,6 +29,13 @@ router.get('/courses/payment/checker' , redirectIfNotAuthenticated.handle , cour
 router.get('/articles', articleController.allArticle);
 router.get('/article/:article', homeController.articlePage);
 
+// home routes
+router.get('/' , homeController.index);
+router.get('/faq' , homeController.faq);
+router.get('/features' , homeController.features);
+router.get('/chart' , homeController.chart);
+router.get('/support' , homeController.support);
+router.get('/exchange' , homeController.exchange);
 
 
 router.post('/comment' , redirectIfNotAuthenticated.handle , commentValidator.handle() ,homeController.comment);
