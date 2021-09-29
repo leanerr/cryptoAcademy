@@ -34,7 +34,7 @@ router.get('/' , homeController.index);
 router.get('/faq' , homeController.faq);
 router.get('/features' , homeController.features);
 router.get('/chart' , homeController.chart);
-router.get('/support' , homeController.support);
+router.get('/contact' , homeController.contact);
 router.get('/exchange' , homeController.exchange);
 
 

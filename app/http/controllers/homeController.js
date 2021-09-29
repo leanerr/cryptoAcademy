@@ -55,12 +55,23 @@ class homeController extends controller {
     async chart(req , res) {
         res.render('home/chart', {});
     }
-    async support(req , res) {
+    async contact(req , res) {
         res.render('home/contact');
     }
     async exchange(req , res) {
         res.render('home/exchange-one');
     }
+    async news(req , res) {
+        res.render('home/news');
+    }
+    async login(req , res) {
+        res.render('home/login');
+    }
+    async signup(req , res) {
+        res.render('home/signup');
+    }
+
+
 
     async comment(req, res , next) {
         try {
